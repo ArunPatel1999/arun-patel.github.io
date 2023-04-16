@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Daynil Group Solutions Pvt. Ltd.",
+    "url": "https://daynilgroup.com/",
+    "location": "Dombivli, Maharashtra",
+    "role": "Software Developer",
+    "image": "daynil.png",
+    "startDate" : "Feb 2022",
+    "endDate": "Present"
+  },
+  {
+    "name": "The Schnell Apps",
+    "url":"http://theschnellapps.com/",
+    "location": "Bhiwandi, Maharashtra",
+    "role":"Junior Backend Developer",
+    "image": "tsa.jpg",
+    "startDate" :  "Feb 2021",
+    "endDate": "Jan 2022"
+  }
+
+]

@@ -1,0 +1,133 @@
+[
+
+    {
+        "name": "Java",
+        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
+    },    
+    {
+        "name": "Spring",
+        "icon": "https://img.icons8.com/color/48/000000/spring-logo.png"
+    },
+    {
+        "name": "Spring Boot",
+        "icon": "https://img.icons8.com/officel/48/null/spring-logo.png"
+    },
+    {
+        "name": "Hibernate",
+        "icon": "./assets/images/skills/hibernate.png"
+    },
+    {
+        "name": "Microservices",
+        "icon": "./assets/images/skills/microservices.png"
+    },
+    {
+        "name": "Spring Security",
+        "icon": "./assets/images/skills/spring_security.png"
+    },
+    {
+        "name": "JWT",
+        "icon": "https://img.icons8.com/color/48/null/java-web-token.png"
+    },
+    {
+        "name": "Reactive Java",
+        "icon": "./assets/images/skills/reactive_Java.png"
+    },
+    {
+        "name": "Graph-QL",
+        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-graphql-an-open-source-data-query-and-manipulation-language-for-api-logo-color-tal-revivo.png"
+    },
+
+    
+    
+
+    {
+        "name": "HTML5",
+        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+    },
+    {
+        "name": "CSS3",
+        "icon": "https://img.icons8.com/color/48/000000/css3.png"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+    },
+    {
+        "name": "TypeScript",
+        "icon": "https://img.icons8.com/color/48/null/typescript.png"
+    },
+    {
+        "name": "Angular",
+        "icon": "https://img.icons8.com/color/48/null/angularjs.png"
+    },
+
+
+
+    {
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
+    },
+    {
+        "name": "Firebase",
+        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+    },
+
+
+   
+    {
+        "name": "Redis",
+        "icon": "https://img.icons8.com/color/48/null/redis.png"
+    },
+    {
+        "name": "Kafka",
+        "icon": "./assets/images/skills/kafka.png"
+    },
+    {
+        "name": "RabbitMQ",
+        "icon": "./assets/images/skills/rabbitmq.png"
+    },
+   
+    {
+        "name": "Git",
+        "icon": "https://img.icons8.com/color/48/000000/git.png"
+    },
+    {
+        "name": "GitHub",
+        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+    },
+    {
+        "name": "GitLab",
+        "icon": "https://img.icons8.com/color/48/000000/gitlab.png"
+    },
+    
+    
+
+    {
+        "name": "Jenkins",
+        "icon": "https://img.icons8.com/color/48/null/jenkins.png"
+    },
+    {
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/48/null/docker.png"
+    },
+    {
+        "name": "Docker Compose",
+        "icon": "./assets/images/skills/docker_compose.png"
+    },
+    {
+        "name": "Docker Swarm",
+        "icon": "./assets/images/skills/docker_swarm.png"
+    },
+    {
+        "name": "AWS",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
+    }
+]
