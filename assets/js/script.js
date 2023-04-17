@@ -51,23 +51,6 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
-    });
-    // <!-- emailjs to mail contact form data -->
-
 });
 
 document.addEventListener('visibilitychange',
@@ -98,6 +81,8 @@ async function fetchData(type = "skills") {
         response = await fetch("skills.json")
     else if(type === "experience")
         response = await fetch("./experience/experience.json")
+    else if(type === "certificate")
+        response = await fetch("./certificates/certificate.json")
     else
         response = await fetch("./projects/projects.json")
     const data = await response.json();
@@ -114,6 +99,10 @@ fetchData("experience").then(data => {
 
 fetchData("projects").then(data => {
     showProjects(data);
+});
+
+fetchData("certificate").then(data => {
+    showCertificates(data);
 });
 
 function showSkills(skills) {
@@ -231,6 +220,55 @@ function showProjects(projects) {
     srtop.reveal('.work .box', { interval: 200 });
 }
 
+function showCertificates(certificates) {
+    let certificatesContainer = document.querySelector("#certificates .box-container");
+    let certificatesHTML = "";
+    certificates.slice(0, 10).forEach(certificate => {
+        certificatesHTML += `
+        <div class="box tilt">
+            <img draggable="false" src="./assets/images/certificates/${certificate.image}" alt="project" />
+            <div class="content">
+                <div class="tag">
+                    <h4>${certificate.title}</h4>
+                </div>
+                <div class="desc">
+                    <p> ${certificate.title} from <strong>${certificate.org} </strong> </p>
+                    <div class="btns">
+                        <a href="./assets/images/certificates/${certificate.image}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    `});
+    if(certificates.length > 10) {
+        certificatesHTML += `
+        <div class="morebtn">
+            <a href="/certificates" class="btn">
+                <span>View All</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    `}
+    certificatesContainer.innerHTML = certificatesHTML;
+
+    // <!-- tilt js effect starts -->
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 15,
+    });
+    // <!-- tilt js effect ends -->
+
+    /* ===== SCROLL REVEAL ANIMATION ===== */
+    const srtop = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 1000,
+        reset: true
+    });
+
+    /* SCROLL PROJECTS */
+    srtop.reveal('.work .box', { interval: 200 });
+}
+
 
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
@@ -287,10 +325,8 @@ srtop.reveal('.home .content .btn', { delay: 200 });
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .linkedin', { interval: 600 });
 srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+srtop.reveal('.home .mail', { interval: 600 });
+srtop.reveal('.home .hackerrank', { interval: 600 });
 
 /* SCROLL ABOUT */
 srtop.reveal('.about .content h3', { delay: 200 });

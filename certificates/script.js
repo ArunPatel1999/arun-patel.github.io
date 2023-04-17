@@ -17,31 +17,32 @@ $(document).ready(function(){
 
 
     
-async function fetchData(type = "skills") {
-    let response = await fetch("./experience.json")    
+async function fetchData() {
+    let response = await fetch("./certificate.json")    
     return await response.json();
 }
 
-fetchData("experience").then(data => {
-    showExperience(data);
+fetchData().then(data => {
+    showCertificates(data);
 });
 
-function showExperience(experiences) {
-    let experienceContainer = document.querySelector("#experience .timeline");
+function showCertificates(experiences) {
+    let experienceContainer = document.querySelector("#certificates .box-container");
     let projectHTML = "";
-    experiences.forEach((experience, i) => {
+    experiences.forEach((certificate) => {
         projectHTML += `
-        <div class="container `+((i % 2 == 0) ?  "right" : "left" )+`">
+        <div class="box tilt">
+            <img draggable="false" src="../assets/images/certificates/${certificate.image}" alt="project" />
             <div class="content">
-                <img  style="float: right; padding: 1.5px; padding-left: 0px; border-radius: 10px;" src="../assets/images/experience/${experience.image}" alt="">
                 <div class="tag">
-                    <a href="${experience.url}" target="_blank"> <h2>${experience.name}</h2> </a>
+                    <h4>${certificate.title}</h4>
                 </div>
                 <div class="desc">
-                    <h3>${experience.role}</h3>
-                    <p>${experience.location}</p>
-                    <p>${experience.startDate} - ${experience.endDate}</p>
-                </div>        
+                    <p> ${certificate.title} from <strong>${certificate.org} </strong> </p>
+                    <div class="btns">
+                        <a href="../assets/images/certificates/${certificate.image}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>                    
+                    </div>
+                </div>
             </div>
         </div>
     `});
@@ -57,7 +58,7 @@ function showExperience(experiences) {
     });
 
     /* SCROLL PROJECTS */
-    srtop.reveal('.experience .content', { interval: 200 });
+    srtop.reveal('.certificates .content', { interval: 200 });
 }
 
 
@@ -70,8 +71,8 @@ const srtop = ScrollReveal({
     reset: true
 });
 
-srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
+srtop.reveal('.certificates .timeline',{delay: 400});
+srtop.reveal('.certificates .timeline .container',{interval: 400}); 
 
 
 // Start of Tawk.to Live Chat

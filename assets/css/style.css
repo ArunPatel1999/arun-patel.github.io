@@ -352,20 +352,17 @@ header .navbar ul li a:hover {
   color: #fff;
   background-color: #0685da;
 }
+.social-icons a.linkedin:hover {
+  background-color: #0A66C2;
+}
 .social-icons a.github:hover {
   background-color: #0e0e0e;
 }
-.social-icons a.twitter:hover {
-  background-color: #00aced;
+.social-icons a.mail:hover {
+  background-color: #DB4437;
 }
-.social-icons a.linkedin:hover {
-  background-color: #007bb6;
-}
-.social-icons a.dev:hover {
-  background-color: #070707;
-}
-.social-icons a.instagram:hover {
-  background-color: #ee00da;
+.social-icons a.hackerrank:hover {
+  background-color: #1ad527;
 }
 /* social icons end */
 
@@ -591,7 +588,7 @@ header .navbar ul li a:hover {
 
 /* education section starts */
 .education {
-  background: #e5ecfb;
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   min-height: 80vh;
 }
 .education .qoute {
@@ -993,11 +990,11 @@ header .navbar ul li a:hover {
 /* experience section ends */
 
 /* contact section starts */
-.contact {
-  background: #e5ecfb;
+.certificates {
   min-height: 60vh;
+  background-color: #D7DBDD;
 }
-.contact .container {
+.certificates .container {
   max-width: 1050px;
   width: 100%;
   background: #fff;
@@ -1005,90 +1002,130 @@ header .navbar ul li a:hover {
   margin: 2rem 5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.contact .container .content {
+.certificates.container .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2.5rem 2rem;
 }
-.contact .content .image-box {
+.certificates .content .image-box {
   max-width: 60%;
   margin-left: 4rem;
 }
-.contact .content .image-box img {
+.certificates .content .image-box img {
   width: 100%;
   height: 40rem;
   position: relative;
 }
-.contact .content form {
+.certificates .content form {
   width: 45%;
   margin-right: 3.5rem;
 }
-form .form-group {
+.certificates .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+.certificates .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+}
+.certificates .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.certificates .box-container .box .content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+.certificates .box-container .box .content .tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  background: #ffd900;
+}
+.certificates .box-container .box .content .tag h3 {
+  font-size: 2rem;
+}
+.certificates .box-container .box:hover .content {
+  top: 25%;
+}
+.certificates .desc {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.form-group .field {
-  height: 50px;
+.certificates .desc p {
+  font-size: 1.5rem;
+}
+.certificates .desc .btns {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+.certificates .desc .btns .btn {
+  line-height: 0;
+  display: inline;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgb(12, 12, 12);
+  margin-right: 2rem;
+}
+.certificates .desc .btns .btn:hover {
+  background: #310ae0f5;
+}
+.certificates .viewall {
+  display: flex;
+  justify-content: center;
+}
+.certificates .viewall .btn {
   position: relative;
-  margin: 1rem;
-  width: 100%;
+  line-height: 0;
+  padding: 1.6rem 3rem;
+  border-radius: 0.5em;
+  transition: 0.5s;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  border: 2px solid #fff;
+  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
+  text-align: center;
 }
-form i {
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  color: rgb(51, 51, 51);
-  font-size: 17px;
-  pointer-events: none;
-  transform: translateY(-50%);
+.certificates .viewall .btn span {
+  font-weight: 600;
+  font-size: 1.7rem;
+  font-family: "Nunito", sans-serif;
 }
-form .field input,
-form .message textarea {
-  width: 100%;
-  height: 100%;
-  outline: none;
-  padding: 0 16px 0 48px;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
-  background: #e5ecfb;
+.certificates .viewall .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
 }
-.field input::placeholder,
-.message textarea::placeholder {
-  color: rgb(51, 51, 51);
+.certificates .viewall .btn:hover {
+  background: #fff;
+  color: #000;
 }
-.field input:focus,
-.message textarea:focus {
-  padding-left: 47px;
-  border: 2px solid rgb(115, 3, 167);
-}
-.field input:focus ~ i,
-.message textarea:focus ~ i {
-  color: rgb(115, 3, 167);
-}
-form .message {
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form .message i {
-  top: 25px;
-  font-size: 20px;
-  left: 15px;
-}
-form .message textarea {
-  min-height: 130px;
-  max-height: 230px;
-  max-width: 100%;
-  min-width: 100%;
-  padding: 12px 20px 0 48px;
-}
-form .message textarea::-webkit-scrollbar {
-  width: 0px;
+.certificates .viewall .btn:hover i {
+  transform: translateX(5px);
 }
 form .button-area {
   display: flex;
@@ -1129,19 +1166,19 @@ form .button-area {
 }
 /* contact section media queries starts */
 @media (max-width: 900px) {
-  .contact {
+  .certificates {
     min-height: 70vh;
   }
-  .contact .container {
+  .certificates .container {
     margin: 3rem 0 2rem 0;
   }
-  .contact .container .content {
+  .certificates .container .content {
     padding: 18px 12px;
   }
-  .contact .content .image-box {
+  .certificates .content .image-box {
     display: none;
   }
-  .contact .content form {
+  .certificates .content form {
     width: 100%;
     margin-right: 2rem;
   }
@@ -1408,3 +1445,12 @@ form .button-area {
     transform: scale(1.1);
   }
 }
+
+.experience {
+  background: -webkit-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+  background: -o-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+  background: -moz-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+  background: linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+}
+
+
