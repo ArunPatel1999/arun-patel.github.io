@@ -5,14 +5,14 @@ $(document).ready(function () {
     totalExperience.innerHTML  += ""+getTotalExperience();
 
     function getTotalExperience() {
-        const startDate = new Date("February 1, 2021"); 
+        const startDate = new Date("January 2, 2021"); 
         const now = new Date(); 
         var monthsOfExperience = (now.getFullYear() - startDate.getFullYear()) * 12 + now.getMonth() - startDate.getMonth(); 
         monthsOfExperience = monthsOfExperience +1 ;
         const yearsOfExperience = monthsOfExperience / 12; 
+        console.log('exip  '+ yearsOfExperience.toFixed(1));
         return yearsOfExperience.toFixed(1);
     }
-
 
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
@@ -144,7 +144,7 @@ function showExperience(experiences) {
     if(experiences.length > 4) {
         projectHTML += `
         <div class="morebtn">
-            <a href="/experience" class="btn">
+            <a href="./experience" class="btn">
                 <span>View All</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -194,7 +194,7 @@ function showProjects(projects) {
     if(projects.length > 10) {
         projectHTML += `
         <div class="morebtn">
-            <a href="/projects" class="btn">
+            <a href="./projects" class="btn">
                 <span>View All</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -243,7 +243,7 @@ function showCertificates(certificates) {
     if(certificates.length > 10) {
         certificatesHTML += `
         <div class="morebtn">
-            <a href="/certificates" class="btn">
+            <a href="./certificates" class="btn">
                 <span>View All</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
