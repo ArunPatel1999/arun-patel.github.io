@@ -79,7 +79,10 @@
         "name": "Firebase",
         "icon": "https://img.icons8.com/color/48/000000/firebase.png"
     },
-
+    {
+            "name": "Elasticsearch",
+            "icon": "https://img.icons8.com/color/48/elasticsearch.png"
+    },
 
    
     {
@@ -94,7 +97,24 @@
         "name": "RabbitMQ",
         "icon": "./assets/images/skills/rabbitmq.png"
     },
-   
+    {
+        "name": "Kibana",
+        "icon": "https://img.icons8.com/color/48/kibana.png"
+    },
+    {
+            "name": "Logstash",
+            "icon": "https://img.icons8.com/color/48/logstash.png"
+    },    
+    {
+            "name": "Filebeat",
+            "icon": "./assets/images/skills/filebeat.png"
+    },    
+    {
+            "name": "Heartbeat",
+            "icon": "./assets/images/skills/heartbeat.png"
+    },
+
+    
     {
         "name": "Git",
         "icon": "https://img.icons8.com/color/48/000000/git.png"
