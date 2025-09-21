@@ -36,7 +36,14 @@
         "name": "Graph-QL",
         "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-graphql-an-open-source-data-query-and-manipulation-language-for-api-logo-color-tal-revivo.png"
     },
-
+    {
+        "name": "Scala",
+        "icon": "https://img.icons8.com/?id=7JREbec1RZXO&size=48"
+    },
+   {
+        "name": "Python",
+        "icon": "https://img.icons8.com/?id=13441&size=48"
+    },
     
     
 
@@ -85,6 +92,15 @@
     },
 
    
+    
+    {
+        "name": "Spark",
+        "icon": "https://img.icons8.com/?id=0cRqPqlItA0E&size=48"
+    },
+    {
+        "name": "ML",
+        "icon": "https://img.icons8.com/?id=ZWIgKlS0AmPk&size=48"
+    },
     {
         "name": "Redis",
         "icon": "https://img.icons8.com/color/48/null/redis.png"
