@@ -96,11 +96,6 @@ function startSnakeGame() {
     document.getElementById('snake-score').textContent = score;
     document.getElementById('snake-message').textContent = '';
     
-    // Show mobile controls on mobile devices
-    if (window.innerWidth <= 768) {
-        document.getElementById('snake-mobile-controls').style.display = 'flex';
-    }
-    
     document.addEventListener('keydown', (e) => {
         if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
             e.preventDefault();
@@ -112,13 +107,6 @@ function startSnakeGame() {
     });
     
     gameLoop();
-}
-
-function moveSnake(direction) {
-    if (direction === 'up' && dy === 0) { dx = 0; dy = -20; }
-    if (direction === 'down' && dy === 0) { dx = 0; dy = 20; }
-    if (direction === 'left' && dx === 0) { dx = -20; dy = 0; }
-    if (direction === 'right' && dx === 0) { dx = 20; dy = 0; }
 }
 
 function gameLoop() {
@@ -227,35 +215,9 @@ function start2048() {
     score2048 = 0;
     document.getElementById('score-2048').textContent = score2048;
     document.getElementById('message-2048').textContent = '';
-    
-    // Show mobile controls on mobile devices
-    if (window.innerWidth <= 768) {
-        document.getElementById('2048-mobile-controls').style.display = 'flex';
-    }
-    
     addRandom2048();
     addRandom2048();
     render2048();
-}
-
-function move2048(direction) {
-    const currentTime = Date.now();
-    if (currentTime - lastMoveTime < 150) return;
-    
-    let moved = false;
-    if (direction === 'left') moved = moveLeft2048();
-    if (direction === 'right') moved = moveRight2048();
-    if (direction === 'up') moved = moveUp2048();
-    if (direction === 'down') moved = moveDown2048();
-    
-    if (moved) {
-        lastMoveTime = currentTime;
-        addRandom2048();
-        render2048();
-        document.getElementById('score-2048').textContent = score2048;
-        if (checkWin2048()) document.getElementById('message-2048').textContent = 'You Win!';
-        else if (checkGameOver2048()) document.getElementById('message-2048').textContent = 'Game Over!';
-    }
 }
 
 function addRandom2048() {
