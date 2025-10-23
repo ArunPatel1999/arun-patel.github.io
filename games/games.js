@@ -59,10 +59,18 @@ function handleCellClick(e) {
 
 function checkWinner() {
     const winPatterns = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-    return winPatterns.some(pattern => {
+    for (let pattern of winPatterns) {
         const [a,b,c] = pattern;
-        return xoBoard[a] && xoBoard[a] === xoBoard[b] && xoBoard[a] === xoBoard[c];
-    });
+        if (xoBoard[a] && xoBoard[a] === xoBoard[b] && xoBoard[a] === xoBoard[c]) {
+            // Add winning line effect
+            const cells = document.querySelectorAll('.cell');
+            cells[a].classList.add('winner');
+            cells[b].classList.add('winner');
+            cells[c].classList.add('winner');
+            return true;
+        }
+    }
+    return false;
 }
 
 function resetXOGame() {
@@ -71,7 +79,7 @@ function resetXOGame() {
     xoGameActive = true;
     document.querySelectorAll('.cell').forEach(cell => {
         cell.textContent = '';
-        cell.classList.remove('x', 'o');
+        cell.classList.remove('x', 'o', 'winner');
     });
     document.getElementById('game-status').textContent = "Player X's turn";
 }
@@ -89,10 +97,13 @@ function startSnakeGame() {
     document.getElementById('snake-message').textContent = '';
     
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowUp' && dy === 0) { dx = 0; dy = -20; }
-        if (e.key === 'ArrowDown' && dy === 0) { dx = 0; dy = 20; }
-        if (e.key === 'ArrowLeft' && dx === 0) { dx = -20; dy = 0; }
-        if (e.key === 'ArrowRight' && dx === 0) { dx = 20; dy = 0; }
+        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+            e.preventDefault();
+            if (e.key === 'ArrowUp' && dy === 0) { dx = 0; dy = -20; }
+            if (e.key === 'ArrowDown' && dy === 0) { dx = 0; dy = 20; }
+            if (e.key === 'ArrowLeft' && dx === 0) { dx = -20; dy = 0; }
+            if (e.key === 'ArrowRight' && dx === 0) { dx = 20; dy = 0; }
+        }
     });
     
     gameLoop();
@@ -247,10 +258,13 @@ function handle2048Keys(e) {
     
     let moved = false;
     
-    if (e.key === 'ArrowLeft') moved = moveLeft2048();
-    if (e.key === 'ArrowRight') moved = moveRight2048();
-    if (e.key === 'ArrowUp') moved = moveUp2048();
-    if (e.key === 'ArrowDown') moved = moveDown2048();
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+        e.preventDefault();
+        if (e.key === 'ArrowLeft') moved = moveLeft2048();
+        if (e.key === 'ArrowRight') moved = moveRight2048();
+        if (e.key === 'ArrowUp') moved = moveUp2048();
+        if (e.key === 'ArrowDown') moved = moveDown2048();
+    }
     
     if (moved) {
         lastMoveTime = currentTime;

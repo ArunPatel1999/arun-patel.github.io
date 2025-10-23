@@ -164,6 +164,17 @@ body.light .games-menu h2 {
     color: #4ecdc4;
 }
 
+.cell.winner {
+    background: #ffd93d !important;
+    animation: winnerPulse 1s ease-in-out infinite;
+    box-shadow: 0 0 20px #ffd93d;
+}
+
+@keyframes winnerPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
 /* Snake Game */
 .snake-container {
     padding: 20px;
