@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Here Technologies",
+    "url": "https://www.here.com/",
+    "location": "Mumbai, Maharashtra",
+    "role": "Software Engineer II",
+    "image": "here.jpg",
+    "startDate" : "Oct 2024",
+    "endDate": "Present"
+  },
+  {
+    "name": "Daynil Group Solutions Pvt. Ltd.",
+    "url": "https://daynilgroup.com/",
+    "location": "Dombivli, Maharashtra",
+    "role": "Software Developer",
+    "image": "daynil.png",
+    "startDate" : "Feb 2022",
+    "endDate": "Jun 2024"
+  },
+  {
+    "name": "The Schnell Apps",
+    "url":"http://theschnellapps.com/",
+    "location": "Bhiwandi, Maharashtra",
+    "role":"Junior Backend Developer",
+    "image": "tsa.jpg",
+    "startDate" :  "Feb 2021",
+    "endDate": "Jan 2022"
+  }
+
+]

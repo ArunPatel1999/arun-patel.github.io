@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="games.css">
+</head>
+<body>
+    <div class="games-menu" id="games-menu">
+        <h2>Choose a Game</h2>
+        <div class="game-buttons">
+            <button class="game-btn" data-game="xo">⭕ Tic Tac Toe</button>
+            <button class="game-btn" data-game="snake">🐍 Snake</button>
+            <button class="game-btn" data-game="memory">🧠 Memory</button>
+            <button class="game-btn" data-game="2048">🎯 2048</button>
+            <button class="game-btn" data-game="snakeladder">🪜 Snake & Ladder</button>
+        </div>
+    </div>
+    
+    <div class="game-container" id="xo-game" style="display: none;">
+        <button class="back-btn" onclick="showGamesMenu()">← Back</button>
+        <div class="xo-game">
+            <div class="game-status" id="game-status">Player X's turn</div>
+            <div class="game-board" id="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button class="reset-btn" id="reset-btn">New Game</button>
+        </div>
+    </div>
+    
+    <div class="game-container" id="snake-game" style="display: none;">
+        <button class="back-btn" onclick="showGamesMenu()">← Back</button>
+        <div class="snake-container">
+            <div class="snake-score">Score: <span id="snake-score">0</span></div>
+            <div class="game-message" id="snake-message"></div>
+            <canvas id="snake-canvas" width="400" height="400"></canvas>
+            <div class="snake-controls">
+                <button onclick="startSnakeGame()">Start Game</button>
+                <p>Use arrow keys to move</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-container" id="memory-game" style="display: none;">
+        <button class="back-btn" onclick="showGamesMenu()">← Back</button>
+        <div class="memory-container">
+            <div class="memory-score">Moves: <span id="memory-moves">0</span></div>
+            <div class="game-message" id="memory-message"></div>
+            <div class="memory-board" id="memory-board"></div>
+            <button class="reset-btn" onclick="startMemoryGame()">New Game</button>
+        </div>
+    </div>
+    
+    <div class="game-container" id="2048-game" style="display: none;">
+        <button class="back-btn" onclick="showGamesMenu()">← Back</button>
+        <div class="game-2048">
+            <div class="score-2048">Score: <span id="score-2048">0</span></div>
+            <div class="game-message" id="message-2048"></div>
+            <div class="board-2048" id="board-2048"></div>
+            <button class="reset-btn" onclick="start2048()">New Game</button>
+            <p>Use arrow keys to move tiles</p>
+        </div>
+    </div>
+    
+    <div class="game-container" id="snakeladder-game" style="display: none;">
+        <button class="back-btn" onclick="showGamesMenu()">← Back</button>
+        <div class="snakeladder-container">
+
+            <div class="game-message" id="snakeladder-message"></div>
+            <div class="board-container">
+                <div class="snakeladder-board" id="snakeladder-board"></div>
+            </div>
+            <div class="bottom-controls">
+                <div class="dice-container">
+                    <div class="dice" id="dice" onclick="rollDice()">
+                        <div class="dice-face dice-1">
+                            <div class="dot"></div>
+                        </div>
+                        <div class="dice-face dice-2">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="dice-face dice-3">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="dice-face dice-4">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="dice-face dice-5">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="dice-face dice-6">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="reset-btn" onclick="startSnakeLadder()">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="games.js"></script>
+</body>
+</html>

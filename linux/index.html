@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Patel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="btn close"></span>
+                <span class="btn minimize"></span>
+                <span class="btn maximize"></span>
+            </div>
+            <div class="title">┌──(user㉿arun)-[~/portfolio]</div>
+        </div>
+        <div class="terminal-body">
+            <div id="output">
+                <div class="line parrot-banner">╔═══════════════════════════════════════════════════════════════╗</div>
+                <div class="line parrot-banner">║                       _                                       ║</div>
+                <div class="line parrot-banner">║                      / \   _ __ _   _ _ __                    ║</div>
+                <div class="line parrot-banner">║                     / _ \ | '__| | | | '_ \                   ║</div>
+                <div class="line parrot-banner">║                    / ___ \| |  | |_| | | | |                  ║</div>
+                <div class="line parrot-banner">║                   /_/   \_\_|   \__,_|_| |_|                  ║</div>
+                <div class="line parrot-banner">║                                                               ║</div>
+                <div class="line parrot-banner">║               Welcome to Portfolio Terminal v2.0              ║</div>
+                <div class="line parrot-banner">║               Type 'help' for available commands              ║</div>
+                <div class="line parrot-banner">╚═══════════════════════════════════════════════════════════════╝</div>
+                <div class="line"></div>
+            </div>
+            <div id="resume-viewer" class="resume-viewer" style="display: none;">
+                <div class="resume-header">
+                    <span>Resume Viewer</span>
+                    <button id="close-resume" class="close-btn">✕</button>
+                </div>
+                <iframe id="resume-frame" src="" width="100%" height="400px"></iframe>
+            </div>
+            <div class="input-line">
+                <span class="prompt">└─$ </span>
+                <input type="text" id="command-input" autofocus>
+            </div>
+        </div>
+    </div>
+    <script src="../assert/portfolio-data.js"></script>
+    <script src="../assert/terminal-commands.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

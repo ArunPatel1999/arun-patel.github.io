@@ -1,0 +1,31 @@
+[
+ 
+  {
+    "name": "Talk",
+    "desc": "A React-based WhatsApp web clone using Firebase is a web application that replicates the functionality of WhatsApp Web using React for the frontend and Firebase for the backend.",
+    "image": "talk",
+    "category": "Web",
+    "technologies": {
+      "frontend" : ["ReactJS", "Html", "CSS", "JavaScript", "Firebase"]
+    },
+    "links": {
+      "view": "https://whatsapp-web-clone-36aec.firebaseapp.com/",
+      "code": "https://github.com/ArunPatel1999/Whatsapp-Web"
+    }
+  },
+  {
+    "name": "Movie",
+    "desc": "Spring Boot and Angular based Movie website",
+    "image": "movie",
+    "category": "Full-Stack",
+    "technologies": {
+      "backend" : ["Java", "Spring Boot", "Spring Security", "JWT", "PostgreSQL"],
+      "frontend" : ["Angular", "TypeScript", "HTML", "CSS", "JavaScript"]
+    },
+    "links": {
+      "view": "https://movie-angular-frontend.heroku/",
+      "code": "https://github.com/ArunPatel1999/Angular-Movie-Frontend"
+    }
+  }
+ 
+]
