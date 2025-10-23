@@ -45,7 +45,17 @@
             <canvas id="snake-canvas" width="400" height="400"></canvas>
             <div class="snake-controls">
                 <button onclick="startSnakeGame()">Start Game</button>
-                <p>Use arrow keys to move</p>
+                <p>Use arrow keys or touch controls to move</p>
+                <div class="mobile-controls" id="snake-mobile-controls" style="display: none;">
+                    <div class="control-row">
+                        <button class="control-btn" onclick="moveSnake('up')">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="control-btn" onclick="moveSnake('left')">←</button>
+                        <button class="control-btn" onclick="moveSnake('down')">↓</button>
+                        <button class="control-btn" onclick="moveSnake('right')">→</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -67,7 +77,17 @@
             <div class="game-message" id="message-2048"></div>
             <div class="board-2048" id="board-2048"></div>
             <button class="reset-btn" onclick="start2048()">New Game</button>
-            <p>Use arrow keys to move tiles</p>
+            <p>Use arrow keys or touch controls to move tiles</p>
+            <div class="mobile-controls" id="2048-mobile-controls" style="display: none;">
+                <div class="control-row">
+                    <button class="control-btn" onclick="move2048('up')">↑</button>
+                </div>
+                <div class="control-row">
+                    <button class="control-btn" onclick="move2048('left')">←</button>
+                    <button class="control-btn" onclick="move2048('down')">↓</button>
+                    <button class="control-btn" onclick="move2048('right')">→</button>
+                </div>
+            </div>
         </div>
     </div>
     
